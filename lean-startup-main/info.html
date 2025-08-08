@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Backend with Python & FastAPI Learning Path</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+                max-height: 350px;
+            }
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            font-size: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #4A90E2;
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -50px;
+            top: 5;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #4A90E2;
+            border: 4px solid #F0F4F8;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black text-[#0D2C54]">Potencializando nuestro nivel de Desarrollador
+                Backend</h1>
+            <p class="text-xl md:text-2xl text-[#4A90E2] mt-2 font-semibold">Dominando Python y FastAPI</p>
+        </header>
+
+        <section class="mb-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <p class="text-lg text-gray-600">
+                    Este es el reporte final de una evaluación técnica aplicada con el propósito de medir los conocimientos y habilidades prácticas del candidato en el desarrollo backend. 
+                    La prueba abarca desde los fundamentos de Python hasta la creación de APIs utilizando FastAPI. 
+                    Su objetivo es validar la comprensión de arquitecturas modernas, el uso de herramientas profesionales y la aplicación de buenas prácticas en entornos reales de desarrollo.
+                </p>
+                <p class="text-lg text-gray-600 mt-4">
+                    Puedes acceder al documento completo de la evaluación haciendo clic en el siguiente enlace:
+                </p>
+                <a href="https://colab.research.google.com/drive/1Wq2fA2xmCEqg5nZ5uanxm4COpk9obhOr?usp=sharing"
+                    target="_blank"
+                   class="inline-block mt-4 text-blue-600 hover:underline font-semibold">
+                    Ver evaluación del proyecto
+                </a>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-[#0D2C54] mb-4">El Viaje del Desarrollador</h2>
+                <p class="text-lg text-gray-600">
+                    Este plan de estudios te guiará desde los fundamentos de la programación hasta la creación y
+                    despliegue de APIs robustas y escalables. El viaje está dividido en 8 módulos clave, diseñados para
+                    construir tu conocimiento de manera progresiva y sólida.
+                </p>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                <div
+                    class="icon-box mx-auto flex items-center justify-center rounded-full bg-[#E0F7FA] text-[#00796B] mb-4">
+                    🐍</div>
+                <h3 class="text-2xl font-bold text-[#0D2C54]">Python Sólido</h3>
+                <p class="text-gray-600 mt-2">La base de todo. Aprenderás la sintaxis, tipos, la Programación Orientada
+                    a Objetos y las mejores prácticas del lenguaje todo integrado a ejercicios algoritmicos.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                <div
+                    class="icon-box mx-auto flex items-center justify-center rounded-full bg-[#E3F2FD] text-[#1E88E5] mb-4">
+                    🚀</div>
+                <h3 class="text-2xl font-bold text-[#0D2C54]">FastAPI Moderno</h3>
+                <p class="text-gray-600 mt-2">Construirás APIs de alto rendimiento con uno de los frameworks de Python
+                    más rápidos y modernos.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                <div
+                    class="icon-box mx-auto flex items-center justify-center rounded-full bg-[#E8EAF6] text-[#3949AB] mb-4">
+                    ☁️</div>
+                <h3 class="text-2xl font-bold text-[#0D2C54]">Listo para Producción</h3>
+                <p class="text-gray-600 mt-2">Dominarás el testing, GITHUB, la autenticación y el despliegue para llevar
+                    tus
+                    aplicaciones al mundo real.</p>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-16 items-center">
+            <div class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#0D2C54] mb-4 text-center">Distribución del Tiempo de Estudio</h2>
+                <p class="text-gray-600 mb-6 text-center">La gráfica muestra cómo se distribuye el tiempo entre las
+                    áreas clave, destacando un fuerte
+                    enfoque en la práctica con FastAPI y las buenas prácticas de desarrollo.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="timeDistributionChart"></canvas>
+                </div>
+            </div>
+            <div class="md:col-span-3">
+                <h2 class="text-2xl font-bold text-[#0D2C54] mb-6 text-center">Hoja de Ruta de Módulos</h2>
+                <div class="relative pl-8">
+                    <div class="timeline-item relative pb-8">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-bold text-[#0D2C54]">Módulo 1: Python para POO</h3>
+                        <p class="text-gray-600">Sintaxis, Integración de tipos, POO y manejo de errores. La base
+                            indispensable.</p>
+                        <span class="text-sm font-semibold text-[#4A90E2]">2-3 Semanas</span>
+                    </div>
+                    <div class="timeline-item relative pb-8">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-bold text-[#0D2C54]">Módulo 2: Bases de Datos y SQL</h3>
+                        <p class="text-gray-600">Modelado de datos relacionales y consultas con SQL, migraciones, SQL
+                            intermedio y avanzado y desarrollo backend dentro de un ORMs</p>
+                        <span class="text-sm font-semibold text-[#4A90E2]">2-3 Semanas</span>
+                    </div>
+                    <div class="timeline-item relative pb-8">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-bold text-[#0D2C54]">Módulo 4: Construyendo con FastAPI</h3>
+                        <p class="text-gray-600">Rutas, modelos con Pydantic y documentación automática mejorar toda la
+                            documentación.</p>
+                        <span class="text-sm font-semibold text-[#4A90E2]">2-3 Semanas</span>
+                    </div>
+                    <div class="timeline-item relative pb-8">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-bold text-[#0D2C54]">Módulo 5: FastAPI Avanzado</h3>
+                        <p class="text-gray-600">Inyección de dependencias, arquitectura y ORMs, vamos a integrar
+                            algunos elementos de Fastapi avanzado.</p>
+                        <span class="text-sm font-semibold text-[#4A90E2]">3-4 Semanas</span>
+                    </div>
+                    <div class="timeline-item relative pb-8">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-bold text-[#0D2C54]">Módulo 7: Despliegue y Conceptos Adicionales</h3>
+                        <p class="text-gray-600">Autenticación, cloud y despliegue con Docker.</p>
+                        <span class="text-sm font-semibold text-[#4A90E2]">2-3 Semanas</span>
+                    </div>
+                    <div class="timeline-item relative pb-8">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-bold text-[#0D2C54]">Módulo 8: Aplicación de testing con pytest</h3>
+                        <p class="text-gray-600">Vamos a trabajar con Pytest para desarrollar test unitarios y test de
+                            integración</p>
+                        <span class="text-sm font-semibold text-[#4A90E2]">4 Semanas</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="bg-white rounded-lg shadow-md p-8 mb-16">
+            <h2 class="text-3xl font-bold text-[#0D2C54] mb-6 text-center">Evaluación y Meta de Desarrollo</h2>
+            <p class="text-center text-gray-600 mt-6 mb-8">
+                Para guiar tu aprendizaje y establecer metas claras, presentamos una evaluación de un sistema existente
+                en áreas clave de desarrollo backend. Este gráfico de araña ilustra las fortalezas y las áreas de
+                oportunidad, sirviendo como un punto de referencia para el nivel de dominio que este plan de estudios te
+                ayudará a alcanzar.
+            </p>
+            <div class="flex justify-center mb-8">
+                <img src="./descarga.png" alt="" class="max-w-full h-auto">
+            </div>
+            <p class="text-center text-gray-600">
+                El gráfico muestra la evaluación en <strong>Funcionalidad y Cumplimiento de Requisitos</strong>,
+                <strong>Calidad de Código y Estilo</strong>, y <strong>Documentación y Buenas Prácticas</strong>.
+                Nuestro plan de estudios está diseñado para fortalecer significativamente todas estas áreas, llevándote
+                a un nivel de desarrollo profesional y robusto.
+            </p>
+
+        </section>
+        <section class="bg-white rounded-lg shadow-md p-8 mb-16">
+            <h2 class="text-3xl font-bold text-[#0D2C54] mb-2 text-center">¡Construye como un Pro! 🛠️</h2>
+            <p class="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+                ¿Alguna vez soñaste con crear tu propia app, como las que usas a diario? Con FastAPI, puedes hacerlo.
+                Aquí empieza tu aventura real: arquitectura, velocidad y poder en 6 pasos. Prepárate, porque este no es
+                un curso cualquiera... ¡es tu mapa hacia la grandeza backend! 🚀
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <!-- Card 1 -->
+                <div class="border-2 border-dashed border-[#0D2C54] rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-[#0D2C54]">1. Crea APIs Épicas</h3>
+                    <p class="mt-2 text-gray-600">Muchisimos microproyectos con FastAPI. construiremos de verdad una API y usaremos la IA para aprender como es el vibe codding realmente. ¡Tus APIs serán  rápidas y eficientes,
+                        como si fueran portales mágicos a tus datos.</p>
+                    <div class="text-4xl mt-4">🧙‍♂️</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="border-2 border-dashed border-[#4A90E2] rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-[#4A90E2]">2. Arquitectura de Héroes</h3>
+                    <p class="mt-2 text-gray-600">Aprende a separar tu proyecto en capas: rutas, lógica y datos. Como
+                        una fortaleza bien construida, tu app será fuerte y clara aplicamos varias arquitecturas no solo una basica.</p>
+                    <div class="text-4xl mt-4">🏰</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="border-2 border-dashed border-[#F57C00] rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-[#F57C00]">3. Lógica Inteligente</h3>
+                    <p class="mt-2 text-gray-600">Aquí está la mente de tu app. Lógica de negocios, decisiones,
+                        validaciones. casos de uso, Tú serás el cerebro detrás de todo.</p>
+                    <div class="text-4xl mt-4">🧠</div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="border-2 border-dashed border-[#00796B] rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-[#00796B]">4. Datos Bajo Control</h3>
+                    <p class="mt-2 text-gray-600">Controla la base de datos con precisión. CRUDs, consultas y todo lo
+                        necesario para manejar información real profundizando cada vez más y más.</p>
+                    <div class="text-4xl mt-4">💾</div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="border-2 border-dashed border-[#AB47BC] rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-[#AB47BC]">5. Tiempo Real: Magia en Vivo</h3>
+                    <p class="mt-2 text-gray-600">Con WebSockets puedes proyectos en escala en tiempo real, notificaciones y conexiones en tiempo
+                        real, colas y servicios ¡Tu app responderá al instante!</p>
+                    <div class="text-4xl mt-4">⚡</div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="border-2 border-dashed border-[#D32F2F] rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-[#D32F2F]">6. Proyecto Final: Tu Creación 🌍</h3>
+                    <p class="mt-2 text-gray-600">Pon en práctica todo lo aprendido creando muchos proyectos reales. Desde la
+                        idea hasta el despliegue. ¡Este será tu legado digital!</p>
+                    <div class="text-4xl mt-4">🚀</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-[#0D2C54] mb-6 text-center">Tecnologías y Herramientas Clave</h2>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <div class="chart-container h-96">
+                    <canvas id="technologiesChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-6">
+                    Este gráfico de barras compara la importancia y el enfoque de las herramientas que aprenderás. Desde
+                    el framework principal <strong>FastAPI</strong> y el validador de datos <strong>Pydantic</strong>,
+                    hasta herramientas de
+                    calidad de código como <strong>Pytest</strong> y <strong>SQLALCHEMY</strong>, cada una juega un
+                    papel vital en el desarrollo
+                    profesional.
+                </p>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <h2 class="text-3xl font-bold text-[#0D2C54] mb-4">¡Es Hora de Construir!</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                La teoría es importante, pero la práctica lo es todo. El plan culmina con proyectos que solidifican tu
+                aprendizaje, desde una simple API de Tareas hasta una aplicación completa con autenticación.
+            </p>
+            <a href="https://fastapi.tiangolo.com/" target="_blank"
+                class="bg-[#4A90E2] text-white font-bold py-3 px-8 rounded-lg text-xl hover:bg-[#1E88E5] transition-colors">
+                Empezar a Aprender
+            </a>
+        </section>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            return Array.isArray(label) ? label.join(' ') : label;
+        };
+
+        const commonTooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: '#0D2C54',
+                    titleFont: { size: 16, weight: 'bold' },
+                    bodyFont: { size: 14 },
+                    padding: 12,
+                    cornerRadius: 8,
+                }
+            }
+        };
+
+        const timeDistributionCtx = document.getElementById('timeDistributionChart').getContext('2d');
+        new Chart(timeDistributionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Fundamentos (Py+SQL)', 'FastAPI (Básico+Avanzado)', 'Buenas Prácticas', 'Despliegue y Extras', 'Testing'],
+                datasets: [{
+                    label: 'Distribución de Semanas',
+                    data: [3, 3, 4, 3, 4],
+                    backgroundColor: ['#4A90E2', '#f00', '#F57C00', '#00796B', '#00f'],
+                    borderColor: '#F0F4F8',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { size: 14 }
+                        }
+                    },
+                    tooltip: commonTooltipConfig.plugins.tooltip
+                },
+                cutout: '60%'
+            }
+        });
+
+        const technologiesCtx = document.getElementById('technologiesChart').getContext('2d');
+        const techLabels = ['Python', 'SQL', 'FastAPI', 'Pydantic', 'SQLAlchemy (ORM)', 'Pytest', 'Docker', 'Black/Linters'];
+        new Chart(technologiesCtx, {
+            type: 'bar',
+            data: {
+                labels: techLabels.map(wrapLabel),
+                datasets: [{
+                    label: 'Nivel de Profundidad / Enfoque',
+                    data: [90, 75, 95, 85, 70, 80, 65, 88],
+                    backgroundColor: [
+                        '#4A90E2', '#1E88E5', '#0D2C54', '#5C6BC0',
+                        '#7CB342', '#FBC02D', '#26A69A', '#78909C'
+                    ],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                size: 14,
+                                weight: '600'
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: commonTooltipConfig.plugins.tooltip
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
